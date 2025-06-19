@@ -2,7 +2,7 @@ function getmoney()
   return game:GetService("Players").LocalPlayer.leaderstats.Sheckles.Value
 end
 
-local function getFarmPos()
+function getFarmPos()
     local playerName = game.Players.LocalPlayer.Name
     local farms = workspace:WaitForChild("Farm")
     for _, f in pairs(farms:GetChildren()) do
@@ -16,3 +16,4 @@ local function getFarmPos()
     end
     return nil
 end
+
