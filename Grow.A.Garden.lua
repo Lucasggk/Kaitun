@@ -1,1 +1,3 @@
-local money =
+function getmoney()
+  return 
+end
