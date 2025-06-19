@@ -49,3 +49,18 @@ function getPosPlant()
     local posFinal = p + offset
     return Vector3.new(posFinal.X, 0.13552704453468323, posFinal.Z)
 end
+
+function pcs()
+    local player = game.Players.LocalPlayer
+    local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
+    local l = getPosPlant()
+    if tool then
+        local baseName = tool.Name:match("^(.-)%s+[Ss]eed") or tool.Name
+        baseName = baseName:gsub("%s+$", "")
+        local y = math.random() * (1.5 - 0.13) + 0.13
+        game:GetService("ReplicatedStorage").GameEvents.Plant_RE:FireServer(
+            Vector3.new(l.X, y, l.Z),
+            baseName
+        )
+    end
+end
