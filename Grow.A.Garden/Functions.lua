@@ -33,6 +33,11 @@ function tp(x, y)
     if h then h.CFrame = CFrame.new(x + y) end
 end
 
-local p = getFarmPos()
-if p then print(p.X, 0.13552704453468323, p.Z) end
-tp(getFarmPos(), Vector3.new(0, 0, 0))
+function tptofarm()
+    local l = getFarmNumber()
+    local p = getFarmPos()
+    if not l or not p then return end
+    local offset = (l == 1 or l == 3 or l == 5) and Vector3.new(15, 0, 5) or Vector3.new(-15, 0, -5)
+    tp(p, offset)
+end
+
