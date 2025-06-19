@@ -27,9 +27,10 @@ function getFarmNumber()
     end
 end
 
-function tp(x)
+function tp(x, y)
+    y = y or Vector3.new(0,5,0)
     local h = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-    if h then h.CFrame = CFrame.new(x+Vector3.new(0,5,0)) end
+    if h then h.CFrame = CFrame.new(x + y) end
 end
 
-tp(getFarmPos())
+tp(getFarmPos(), Vector3.new(0, 0, 0)
