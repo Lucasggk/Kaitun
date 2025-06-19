@@ -41,3 +41,11 @@ function tptofarm()
     tp(p, offset)
 end
 
+function getPosPlant()
+    local l = getFarmNumber()
+    local p = getFarmPos()
+    if not l or not p then return nil end
+    local offset = (l == 1 or l == 3 or l == 5) and Vector3.new(15, 0, 5) or Vector3.new(-15, 0, -5)
+    local posFinal = p + offset
+    return Vector3.new(posFinal.X, 0.13552704453468323, posFinal.Z)
+end
