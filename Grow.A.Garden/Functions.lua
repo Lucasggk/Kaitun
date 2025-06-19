@@ -17,3 +17,7 @@ function getFarmPos()
     return nil
 end
 
+function tp(x)
+    local h = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+    if h then h.CFrame = CFrame.new(x+Vector3.new(0,5,0)) end
+end
