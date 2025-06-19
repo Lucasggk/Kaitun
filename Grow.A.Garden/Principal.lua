@@ -1,22 +1,35 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucasggk/Kaitun/refs/heads/main/Grow.A.Garden/Functions.lua"))()
 
-local ms = getmoney()
+local ms = tonumber(getmoney())
 local etp
 
 task.spawn(function()
     while true do
-      ms = getmoney()
+      ms = tonumber(getmoney())
       task.wait(0.5)
     end
 end)
 
-if ms >= 0 and ms <= 1000 then
-etp = 1
-elseif ms >= 1001 and ms <= 10000 then
-etp = 2
-elseif ms >= 10001 and ms <= 100000 then
-etp = 3
-else 
-etp = 4
-print(etp)
-end
+task.spawn(function()
+    while true do
+        if ms <= 1000 then
+            etp = 1
+        elseif ms <= 10000 then
+            etp = 2
+        elseif ms <= 100000 then
+            etp = 3
+        elseif ms <= 1000000 then
+            etp = 4
+        elseif ms <= 10000000 then
+            etp = 5
+        elseif ms <= 100000000 then
+            etp = 6
+        elseif ms <= 1000000000 then
+            etp = 7
+        else
+            etp = 8
+        end
+        task.wait(1)
+    end
+end)
+
