@@ -1,6 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucasggk/Kaitun/refs/heads/main/Grow.A.Garden/Functions.lua"))()
 
-local ppxyz = getPosPlant()
 local ms = tonumber(getmoney())
 local etp
 
@@ -34,3 +33,10 @@ task.spawn(function()
     end
 end)
 
+tptocenter()
+
+task.wait(0.2)
+
+esa()
+task.wait(0.1)
+pcs()
