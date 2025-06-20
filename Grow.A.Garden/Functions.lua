@@ -41,6 +41,18 @@ function tptofarm()
     tp(p, offset)
 end
 
+function tptocenter()
+    tp(getFarmPos())
+end
+
+function tptogarden()
+    local l = getFarmNumber()
+    local p = getFarmPos()
+    if not l or not p then return end
+    local offset = (l == 1 or l == 3 or l == 5) and Vector3.new(0, 0, 40) or Vector3.new(0, 0, -40)
+    tp(p, offset)
+end
+
 function getPosPlant()
     local l = getFarmNumber()
     local p = getFarmPos()
@@ -64,3 +76,4 @@ function pcs()
         )
     end
 end
+ 
