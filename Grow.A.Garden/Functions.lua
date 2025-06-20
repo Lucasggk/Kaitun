@@ -77,3 +77,17 @@ function pcs()
     end
 end
  
+function esa()
+    local p = game.Players.LocalPlayer
+    local b, h = p:FindFirstChild("Backpack"), p.Character and p.Character:FindFirstChild("Humanoid")
+    if not (b and h) then return end
+    local l = {}
+    for _, t in ipairs(b:GetChildren()) do
+        local n = t.Name:lower()
+        if t:IsA("Tool") and n:find("seed") and not n:find("pack") then
+            l[#l + 1] = t
+        end
+    end
+    if #l > 0 then h:EquipTool(l[math.random(#l)]) end
+end
+
