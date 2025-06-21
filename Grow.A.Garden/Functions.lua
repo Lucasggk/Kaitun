@@ -100,9 +100,7 @@ function sellinv()
 end
 
 function cl()
-    local UIS = game:GetService("UserInputService")
-    local input = Enum.KeyCode.E
-
-    UIS.InputBegan:Fire(input, false)
-    UIS.InputEnded:Fire(input, false)
+    local vim = game:GetService("VirtualInputManager")
+    vim:SendKeyEvent(true, Enum.KeyCode.E, false, game)
+    vim:SendKeyEvent(false, Enum.KeyCode.E, false, game)
 end
