@@ -46,3 +46,17 @@ pcs()
 task.wait(0.2)
 end
 end)
+
+task.spawn(function()
+        while true do
+            tptocenter()
+            task.wait(5)
+            tptofarm()
+            task.wait(5)
+            sellinv()
+        end
+    end
+)
+
+
+
