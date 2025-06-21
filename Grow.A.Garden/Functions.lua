@@ -96,7 +96,7 @@ function sellinv()
     task.wait(0.3)
     game:GetService("ReplicatedStorage").GameEvents.Sell_Inventory:FireServer() 
     task.wait(0.3)
-    tptocenter()
+    tptofarm()
 end
 
 function cl()
