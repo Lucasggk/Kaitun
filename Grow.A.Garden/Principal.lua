@@ -43,6 +43,8 @@ esa()
 task.wait(0.1)
 pcs()
 pcs()
+pcs()
+pcs()
 task.wait(0.1)
 end
 end)
@@ -57,5 +59,10 @@ task.spawn(function()
     end
 )
 
-
+task.spawn(function()
+    while true do 
+        task.wait(0.05)
+        e()
+    end
+end)
 
