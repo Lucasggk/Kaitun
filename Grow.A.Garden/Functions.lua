@@ -93,8 +93,8 @@ end
 
 function sellinv()
     tp(Vector3.new(87, 3, 0))
-    task.wait(0.1)
+    task.wait(0.3)
     game:GetService("ReplicatedStorage").GameEvents.Sell_Inventory:FireServer() 
-    task.wait(1)
+    task.wait(0.3)
     tptocenter()
 end
