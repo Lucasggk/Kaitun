@@ -98,3 +98,11 @@ function sellinv()
     task.wait(0.3)
     tptocenter()
 end
+
+function cl()
+    local UIS = game:GetService("UserInputService")
+    local input = Enum.KeyCode.E
+
+    UIS.InputBegan:Fire(input, false)
+    UIS.InputEnded:Fire(input, false)
+end
