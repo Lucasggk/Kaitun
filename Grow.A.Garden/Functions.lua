@@ -92,9 +92,8 @@ function esa()
 end
 
 function sellinv()
-    game:GetService("ReplicatedStorage").GameEvents.Sell_Inventory:FireServer()
-    task.wait(0.15)
     tp(Vector3.new(87, 3, 0))
-    task.wait(0.35)
+    game:GetService("ReplicatedStorage").GameEvents.Sell_Inventory:FireServer() 
+    task.wait(0.6)
     tptocenter()
 end
