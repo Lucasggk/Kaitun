@@ -51,8 +51,6 @@ end)
 
 task.spawn(function()
         while true do
-            task.wait(2)
-            tptofarm()
             task.wait(6)
             sellinv()
         end
@@ -61,7 +59,7 @@ task.spawn(function()
 
 task.spawn(function()
     while true do 
-        task.wait(0.05)
+        task.wait(0.025)
         e()
     end
 end)
