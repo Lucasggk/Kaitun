@@ -35,8 +35,14 @@ end)
 
 tptocenter()
 
+print(etp)
+task.spawn(function()
+while true do 
 task.wait(0.2)
-
 esa()
 task.wait(0.1)
 pcs()
+pcs()
+task.wait(0.2)
+end
+end)
