@@ -49,9 +49,9 @@ end)
 
 task.spawn(function()
         while true do
-            task.wait(5)
+            task.wait(2)
             tptofarm()
-            task.wait(5)
+            task.wait(6)
             sellinv()
         end
     end
