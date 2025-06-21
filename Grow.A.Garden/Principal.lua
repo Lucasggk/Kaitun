@@ -49,7 +49,6 @@ end)
 
 task.spawn(function()
         while true do
-            tptocenter()
             task.wait(5)
             tptofarm()
             task.wait(5)
