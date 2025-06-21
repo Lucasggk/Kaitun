@@ -91,3 +91,10 @@ function esa()
     if #l > 0 then h:EquipTool(l[math.random(#l)]) end
 end
 
+function sellinv()
+    game:GetService("ReplicatedStorage").GameEvents.Sell_Inventory:FireServer()
+    task.wait(0.25)
+    tp(Vector3.new(87, 3, 0))
+    task.wait(0.3)
+    tptocenter()
+end
